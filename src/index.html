@@ -15,15 +15,16 @@
 <body>
   <section class="main">
     <button id="show-popup-form" class="btn btn-main">Click me!</button>
+    <h1 id="show-thanks">Thank you</h1>
     <!-- Display success message below -->
   </section>
   <div class="popup">
     <!-- Here goes your popup form HTML code -->
     <a id="close-popup-form"><i class="fas fa-times"></i></a>
     <h1 id="popup-title">Login</h1>
-    <form class="popup-form" name="user-login" onsubmit="return validateForm()">
+    <form class="popup-form" name="user-login" onsubmit="event.preventDefault(); return validateForm()">
       <input type="email" placeholder="E-mail" class="text-field" name="email">
-      <input type="password" placeholder="Password" class="text-field" name="password"/>
+      <input type="password" placeholder="Password" class="text-field" name="password" />
       <label class="checkbox-container">
         <input type="checkbox" name="checkbox" required>
         <span class="check"></span>

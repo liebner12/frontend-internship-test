@@ -3,6 +3,7 @@
 let popup = document.getElementsByClassName("popup");
 let openPopup = document.getElementById("show-popup-form");
 let closePopup = document.getElementById("close-popup-form");
+let changeText = document.getElementById("show-thanks");
 
 openPopup.addEventListener("click", () => {
   popup[0].classList.toggle("active");
@@ -41,5 +42,10 @@ function validateForm() {
     alert("Pole E-mail nie może być puste.");
     return false;
   }
-  return true;
+
+  changeText.classList.toggle("active");
+  openPopup.classList.add("hidden");
+  setInterval(function() {
+    popup[0].classList.toggle("active");
+  }, 3000);
 }

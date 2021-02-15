@@ -1,6 +1,23 @@
 // Here goes your CSS
 @import "layout/main";
 
+.main {
+  h1 {
+    font-weight: 400;
+    font-family: "Lobster", cursive;
+    font-size: 42px;
+    display: none;
+  }
+
+  h1.active {
+    display: block;
+  }
+
+  #show-popup-form.hidden {
+    display: none;
+  }
+}
+
 .popup {
   position: absolute;
   top: 50%;
@@ -102,11 +119,11 @@
   padding: 12px 0;
   border: 0;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.2s background-color ease;
 }
 
 .btn-submit:hover {
-    background-color: $secondary-color;
+  background-color: $secondary-color;
 }
 
 @keyframes fadeIn {
