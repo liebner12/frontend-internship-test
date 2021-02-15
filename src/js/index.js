@@ -11,3 +11,35 @@ openPopup.addEventListener("click", () => {
 closePopup.addEventListener("click", () => {
   popup[0].classList.toggle("active");
 });
+
+function validatePassword(password) {
+  return password.length < 8 ? true : false;
+}
+
+function validateEmail(email) {
+  return email != "" ? false : true;
+}
+
+function containsNumber(password) {
+  return /\d/.test(password) ? false : true;
+}
+
+function validateForm() {
+  let pass = document.forms["user-login"]["password"].value;
+  let email = document.forms["user-login"]["email"].value;
+  if (validatePassword(pass)) {
+    alert("Hasło musi mieć co najmniej 8 znaków!");
+    return false;
+  }
+
+  if (containsNumber(pass)) {
+    alert("Hasło musi zawierać co najmniej jedną cyfrę!");
+    return false;
+  }
+
+  if (validateEmail(email)) {
+    alert("Pole E-mail nie może być puste.");
+    return false;
+  }
+  return true;
+}

@@ -102,6 +102,11 @@
   padding: 12px 0;
   border: 0;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: $secondary-color;
 }
 
 @keyframes fadeIn {
@@ -112,4 +117,3 @@
     opacity: 1;
   }
 }
-

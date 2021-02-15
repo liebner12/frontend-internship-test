@@ -21,11 +21,11 @@
     <!-- Here goes your popup form HTML code -->
     <a id="close-popup-form"><i class="fas fa-times"></i></a>
     <h1 id="popup-title">Login</h1>
-    <form class="popup-form">
-      <input type="email" placeholder="E-mail" class="text-field">
-      <input type="password" placeholder="Password" class="text-field" />
+    <form class="popup-form" name="user-login" onsubmit="return validateForm()">
+      <input type="email" placeholder="E-mail" class="text-field" name="email">
+      <input type="password" placeholder="Password" class="text-field" name="password"/>
       <label class="checkbox-container">
-        <input type="checkbox">
+        <input type="checkbox" name="checkbox" required>
         <span class="check"></span>
         <p>I agree to terms & conditions.</p>
       </label>
