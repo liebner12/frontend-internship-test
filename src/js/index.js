@@ -45,7 +45,5 @@ function validateForm() {
 
   changeText.classList.toggle("active");
   openPopup.classList.add("hidden");
-  setInterval(function() {
-    popup[0].classList.toggle("active");
-  }, 3000);
+  setTimeout(() => popup[0].classList.toggle("active"), 3000);
 }
